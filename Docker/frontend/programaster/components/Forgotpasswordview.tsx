@@ -34,7 +34,7 @@ export default function Home() {
     }
     console.log(dic)
     
-    axios.get('http://backend:9200/my_view/usuarios/', dic, config).then((response) => {
+    axios.get('http://10.50.70.236:9200/my_view/usuarios/', dic, config).then((response) => {
       console.log(response)
       if (response.data.exists) {
         setCorreoEnviado(true)

@@ -25,7 +25,7 @@ export default function Home() {
       }
     }
     try {
-      axios.get('http://backend:9200/my_view/grupo/', {
+      axios.get('http://10.50.70.236:9200/my_view/grupo/', {
         params: {
           profe_nomina: user.user_id
         }
@@ -93,7 +93,7 @@ export default function Home() {
       }
 
 
-      axios.post('http://backend:9200/my_view/anuncio/', intento, config).then((response) => {
+      axios.post('http://10.50.70.236:9200/my_view/anuncio/', intento, config).then((response) => {
 
         alert("Form submited!");
 

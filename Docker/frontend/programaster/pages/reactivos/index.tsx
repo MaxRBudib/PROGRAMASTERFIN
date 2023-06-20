@@ -172,11 +172,11 @@ export default function Home() {
     }
     let titulo = values.titulo
 
-    axios.post('http://backend:9200/my_view/ejercicios/', dic, config).then((response) => {
+    axios.post('http://10.50.70.236:9200/my_view/ejercicios/', dic, config).then((response) => {
       // setEjercicio_ID(response.data.ejercicio_id)
       console.log(response.data)
       try {
-        axios.get('http://backend:9200/my_view/ejercicios/', {
+        axios.get('http://10.50.70.236:9200/my_view/ejercicios/', {
           params: {
             titulo: titulo
           }
@@ -215,45 +215,45 @@ export default function Home() {
 
               ///*
               if (values.opciones == 2) {
-                axios.post('http://backend:9200/my_view/opciones/', op1, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op1, config).then((response) => {
                   console.log(response)
                   alert("Form submited!");
 
                 })
-                axios.post('http://backend:9200/my_view/opciones/', op2, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op2, config).then((response) => {
                   console.log(response)
 
 
                 })
 
               } else if (values.opciones == 3) {
-                axios.post('http://backend:9200/my_view/opciones/', op1, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op1, config).then((response) => {
                   console.log(response)
                   alert("Form submited!");
                 })
-                axios.post('http://backend:9200/my_view/opciones/', op2, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op2, config).then((response) => {
                   console.log(response)
 
                 })
-                axios.post('http://backend:9200/my_view/opciones/', op3, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op3, config).then((response) => {
                   console.log(response)
 
                 })
 
               } else if (values.opciones == 4) {
-                axios.post('http://backend:9200/my_view/opciones/', op1, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op1, config).then((response) => {
                   console.log(response)
                   alert("Form submited!");
                 })
-                axios.post('http://backend:9200/my_view/opciones/', op2, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op2, config).then((response) => {
                   console.log(response)
 
                 })
-                axios.post('http://backend:9200/my_view/opciones/', op3, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op3, config).then((response) => {
                   console.log(response)
 
                 })
-                axios.post('http://backend:9200/my_view/opciones/', op4, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/opciones/', op4, config).then((response) => {
                   console.log(response)
 
                 })
@@ -285,38 +285,38 @@ export default function Home() {
               }
 
               if (values.number_testcases == 2) {
-                axios.post('http://backend:9200/my_view/testCases/', tc1, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc1, config).then((response) => {
                   console.log(response)
                   alert("Form submited!");
                 })
-                axios.post('http://backend:9200/my_view/testCases/', tc2, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc2, config).then((response) => {
                   console.log(response)
                 })
 
               } else if (values.number_testcases == 3) {
-                axios.post('http://backend:9200/my_view/testCases/', tc1, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc1, config).then((response) => {
                   console.log(response)
                   alert("Form submited!");
                 })
-                axios.post('http://backend:9200/my_view/testCases/', tc2, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc2, config).then((response) => {
                   console.log(response)
                 })
-                axios.post('http://backend:9200/my_view/testCases/', tc3, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc3, config).then((response) => {
                   console.log(response)
                 })
 
               } else if (values.number_testcases == 4) {
-                axios.post('http://backend:9200/my_view/testCases/', tc1, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc1, config).then((response) => {
                   console.log(response)
                   alert("Form submited!");
                 })
-                axios.post('http://backend:9200/my_view/testCases/', tc2, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc2, config).then((response) => {
                   console.log(response)
                 })
-                axios.post('http://backend:9200/my_view/testCases/', tc3, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc3, config).then((response) => {
                   console.log(response)
                 })
-                axios.post('http://backend:9200/my_view/testCases/', tc4, config).then((response) => {
+                axios.post('http://10.50.70.236:9200/my_view/testCases/', tc4, config).then((response) => {
                   console.log(response)
                 })
               }

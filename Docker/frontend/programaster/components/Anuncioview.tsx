@@ -22,7 +22,7 @@ export default function Home() {
       }
     }
     try {
-      axios.get('http://backend:9200/my_view/usuarioGrupo/', {
+      axios.get('http://10.50.70.236:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: user.user_id
         }
@@ -31,7 +31,7 @@ export default function Home() {
         console.log(dataGrupo)
         setGrupos(dataGrupo)
         try {
-          axios.get('http://backend:9200/my_view/anuncio/', {
+          axios.get('http://10.50.70.236:9200/my_view/anuncio/', {
             params: {
               grupo_id: dataGrupo
             }

@@ -55,7 +55,7 @@ export default function Home() {
 
 
       }
-      axios.post('http://backend:9200/my_view/usuarios/',intento, config).then((response) => {
+      axios.post('http://10.50.70.236:9200/my_view/usuarios/',intento, config).then((response) => {
       alert("Form submited!");
       router.push('/auth/login/')
     })
@@ -82,7 +82,7 @@ export default function Home() {
 
 
       }
-      axios.post('http://backend:9200/my_view/usuarios/', intento, config).then((response) => {
+      axios.post('http://10.50.70.236:9200/my_view/usuarios/', intento, config).then((response) => {
         //alert("Form submited!");
         router.push('login/')
       })

@@ -31,7 +31,7 @@ export default function Home() {
 
   const getChoiceJSON = (page: number) => {
     setCurrentPage(page);
-    axios.get(`http://backend:9200/my_view/Opciones/?ejercicio_id={  }`)
+    axios.get(`http://10.50.70.236:9200/my_view/Opciones/?ejercicio_id={  }`)
       .then((response) => {
         setPost(response.data)
       })
@@ -40,7 +40,7 @@ export default function Home() {
       });
   };
 
-  //axios.get('http://backend:9200/my_view/Opciones/').then((response) => {
+  //axios.get('http://10.50.70.236:9200/my_view/Opciones/').then((response) => {
   //})
 
   //To use when connected to the backend

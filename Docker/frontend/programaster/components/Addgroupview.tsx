@@ -44,7 +44,7 @@ export default function Home() {
     };
 
     try {
-      const response = await axios.get('http://backend:9200/my_view/grupo/', {
+      const response = await axios.get('http://10.50.70.236:9200/my_view/grupo/', {
         params: {
           codigo_acceso: values.access_code as string
         }
@@ -62,7 +62,7 @@ export default function Home() {
         };
 
       
-        await axios.post('http://backend:9200/my_view/usuarioGrupo/', intento, config);
+        await axios.post('http://10.50.70.236:9200/my_view/usuarioGrupo/', intento, config);
         
         alert("Form submitted!");
       }

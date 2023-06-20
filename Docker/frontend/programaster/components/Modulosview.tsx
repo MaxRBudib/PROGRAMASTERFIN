@@ -13,9 +13,9 @@ import Link from 'next/link';
 
 export default function Home() {
   
-  const baseGrupoURL = "http://backend:9200/my_view/usuarioGrupo/";
-  const baseModuloURL = "http://backend:9200/my_view/modulo/";
-  const baseTareaURL = "http://backend:9200/my_view/tarea/";
+  const baseGrupoURL = "http://10.50.70.236:9200/my_view/usuarioGrupo/";
+  const baseModuloURL = "http://10.50.70.236:9200/my_view/modulo/";
+  const baseTareaURL = "http://10.50.70.236:9200/my_view/tarea/";
 
   //let getGrupoURL: string;
   //let getModuloURL: string;

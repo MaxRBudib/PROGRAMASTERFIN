@@ -30,7 +30,7 @@ export default function Home() {
       }
     }
     try {
-      axios.get('http://backend:9200/my_view/grupo/', {
+      axios.get('http://10.50.70.236:9200/my_view/grupo/', {
         params: {
           profe_nomina: user.user_id
         }

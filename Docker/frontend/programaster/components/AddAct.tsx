@@ -24,7 +24,7 @@ export default function Home() {
 
   const [modulos, setModulos] = useState([])
   useEffect(() => {
-    axios.get('http://backend:9200/my_view/modulo/', {
+    axios.get('http://10.50.70.236:9200/my_view/modulo/', {
       params: {
         grupo_id: query.queryparam
       }
@@ -48,7 +48,7 @@ export default function Home() {
     }
 
     const formattedDateTime = new Date(values.fecha_limite).toISOString();
-    axios.get('http://backend:9200/my_view/ejercicios/').then((response) => {
+    axios.get('http://10.50.70.236:9200/my_view/ejercicios/').then((response) => {
       exerciseFilter = response.data.filter(obj => obj["tema"] == values.tema)
       //      exerciseFilter = exerciseFilter.filter(obj => obj["dificultad"] == values.dificultad)
       while (copyFilter.length < values.num_reactivos && exerciseFilter.length > 0) {
@@ -67,7 +67,7 @@ export default function Home() {
       // "tema": values.tema
     }
 
-    axios.post('http://backend:9200/my_view/tarea/', intento, config).then((response) => {
+    axios.post('http://10.50.70.236:9200/my_view/tarea/', intento, config).then((response) => {
 
       alert("Form submited!");
       for (let i = 0; i < copyFilter.length; i++) {
@@ -78,10 +78,10 @@ export default function Home() {
           "ejercicio_id": copyFilter[i].ejercicio_id,
           "tarea_id": response.data.tarea_id
         }
-        axios.post('http://backend:9200/my_view/ejercicioTarea/', pruebaPost, config)
+        axios.post('http://10.50.70.236:9200/my_view/ejercicioTarea/', pruebaPost, config)
 
       }
-      axios.get('http://backend:9200/my_view/usuarioGrupo/', {
+      axios.get('http://10.50.70.236:9200/my_view/usuarioGrupo/', {
         params: {
           grupo_id: query.queryparam
         }
@@ -96,7 +96,7 @@ export default function Home() {
               tarea_id: response.data.tarea_id
             };
 
-            return axios.post('http://backend:9200/my_view/usuarioEjercicioTarea/', task, config);
+            return axios.post('http://10.50.70.236:9200/my_view/usuarioEjercicioTarea/', task, config);
           });
         });
 

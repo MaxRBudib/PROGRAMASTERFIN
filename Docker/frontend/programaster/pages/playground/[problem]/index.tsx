@@ -21,7 +21,7 @@ function App() {
 
     useEffect(()=> {
         if(router.isReady){
-            axios.get('http://backend:9200/my_view/ejercicios/', {
+            axios.get('http://10.50.70.236:9200/my_view/ejercicios/', {
                 params: {
                     nombre_ejercicio: router.query.problem as string
                 }
@@ -38,7 +38,7 @@ function App() {
 
     const runCode = () => {
         setSubmit(false)
-        axios.post('http://backend:9200/my_view/code/', {code, submit}).then(({data}) => {
+        axios.post('http://10.50.70.236:9200/my_view/code/', {code, submit}).then(({data}) => {
             console.log(data)
             if (data['passed'].length == 0){
                 setPassed('0')
@@ -55,7 +55,7 @@ function App() {
     }
     const submitCode = () => {
         setSubmit(true)
-        axios.post('http://backend:9200/my_view/code/', {code, submit}).then(({data}) => {
+        axios.post('http://10.50.70.236:9200/my_view/code/', {code, submit}).then(({data}) => {
             setResult(data['output'])
 
         })

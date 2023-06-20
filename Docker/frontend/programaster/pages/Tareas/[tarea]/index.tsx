@@ -17,19 +17,19 @@ const extensions = [python()];
 
 function Home() {
 
-  const baseTareaURL = "http://backend:9200/my_view/tarea/";
-  const baseEjURL = "http://backend:9200/my_view/ejercicios/";
-  const baseOpcionesURL = "http://backend:9200/my_view/opciones/";
-  const baseTestCasesURL = "http://backend:9200/my_view/testCases/";
-  const baseUsEjTarURL = "http://backend:9200/my_view/usuarioEjercicioTarea/";
+  const baseTareaURL = "http://10.50.70.236:9200/my_view/tarea/";
+  const baseEjURL = "http://10.50.70.236:9200/my_view/ejercicios/";
+  const baseOpcionesURL = "http://10.50.70.236:9200/my_view/opciones/";
+  const baseTestCasesURL = "http://10.50.70.236:9200/my_view/testCases/";
+  const baseUsEjTarURL = "http://10.50.70.236:9200/my_view/usuarioEjercicioTarea/";
 
   const router = useRouter()
   const [tareaID, setTareaID] = useState('')
 
   useEffect(() => {
     async function fetchData(){
-      const data = await axios.get(`http://backend:9200/my_view/ejercicioTarea/?tarea_id=${router.query.tarea as string}`)
-      const question = await axios.get(`http://backend:9200/my_view/tarea/?tarea_id=${router.query.tarea as string}`)
+      const data = await axios.get(`http://10.50.70.236:9200/my_view/ejercicioTarea/?tarea_id=${router.query.tarea as string}`)
+      const question = await axios.get(`http://10.50.70.236:9200/my_view/tarea/?tarea_id=${router.query.tarea as string}`)
       setNombreTarea(question.data[0].nombre_tarea)
       setEjTar(data.data)
     }
@@ -199,7 +199,7 @@ function Home() {
       setCody(answ)
     }
     const submit = false
-    axios.post('http://backend:9200/my_view/code/', { code, submit, tests }).then(({ data }) => {
+    axios.post('http://10.50.70.236:9200/my_view/code/', { code, submit, tests }).then(({ data }) => {
       if (data.output.length != 0) {
         console.log(data.output)
         setResultado(data.output)

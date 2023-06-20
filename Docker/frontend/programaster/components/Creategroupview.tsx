@@ -72,7 +72,7 @@ export default function Home() {
       matricula_nomina
     }
     
-    axios.post('http://backend:9200/my_view/grupo/', intento, config).then((response) => {
+    axios.post('http://10.50.70.236:9200/my_view/grupo/', intento, config).then((response) => {
       
       alert("Form submited!");
       router.push('/grupos')

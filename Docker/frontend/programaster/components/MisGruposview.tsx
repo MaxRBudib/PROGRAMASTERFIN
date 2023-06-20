@@ -22,7 +22,7 @@ export default function Home() {
       }
     }
     try {
-      axios.get('http://backend:9200/my_view/usuarioGrupo/', {
+      axios.get('http://10.50.70.236:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: matricula
         }
@@ -37,7 +37,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      axios.get('http://backend:9200/my_view/grupo/').
+      axios.get('http://10.50.70.236:9200/my_view/grupo/').
         then((response) => {
           //console.log(response.data)
           setGrupos(response.data)
