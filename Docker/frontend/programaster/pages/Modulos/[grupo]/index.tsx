@@ -53,7 +53,7 @@ export default function Home() {
       }
     }
     try {
-      axios.get('http://127.0.0.1:8000/my_view/modulo/')
+      axios.get('http://backend:9200/my_view/modulo/')
         .then(response => {
           // Handle the response data here
           let dataModulo = response.data
@@ -69,7 +69,7 @@ export default function Home() {
     try {
       console.log(modulo)
       console.log(clase)
-      axios.get('http://127.0.0.1:8000/my_view/tarea/').then((response) => {
+      axios.get('http://backend:9200/my_view/tarea/').then((response) => {
         setActividad(response.data)
       })
     } catch {
@@ -132,7 +132,7 @@ export default function Home() {
       descripcion: formData.descripcionModulo,
       grupo_id: clase
     }
-    axios.post('http://127.0.0.1:8000/my_view/modulo/', dic)
+    axios.post('http://backend:9200/my_view/modulo/', dic)
     setOpen(false);
     setFormData({
       nombreModulo: "",

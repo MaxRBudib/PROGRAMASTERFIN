@@ -47,7 +47,7 @@ export default function Home() {
   //Get data for anuncios
   useEffect(() => {
     try {
-      axios.get('http://127.0.0.1:8000/my_view/usuarioGrupo/', {
+      axios.get('http://backend:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: nomina
         }
@@ -55,7 +55,7 @@ export default function Home() {
         const dataGrupo = response.data[0].grupo_id
         setGrupos(dataGrupo)
         try {
-          axios.get('http://127.0.0.1:8000/my_view/anuncio/', {
+          axios.get('http://backend:9200/my_view/anuncio/', {
             params: {
               grupo_id: dataGrupo
             }
@@ -74,21 +74,21 @@ export default function Home() {
   //Get data for "Mi profesor" section
   useEffect(() => {
     try {
-      axios.get('http://127.0.0.1:8000/my_view/usuarioGrupo/', {
+      axios.get('http://backend:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: nomina
         }
       }).then(response => {
         const dataGrupo = response.data[0].grupo_id
         setGrupos(dataGrupo)
-        axios.get('http://127.0.0.1:8000/my_view/grupo/', {
+        axios.get('http://backend:9200/my_view/grupo/', {
           params: {
             grupo_id: dataGrupo
           }
         }).then(response => {
           const dataNomina = response.data[0].profe_nomina
           //setNomina(nomina)
-          axios.get('http://127.0.0.1:8000/my_view/usuarios/', {
+          axios.get('http://backend:9200/my_view/usuarios/', {
             params: {
               matricula_nomina: dataNomina
             }
@@ -109,13 +109,13 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/my_view/tarea/').then(response => {
+    axios.get('http://backend:9200/my_view/tarea/').then(response => {
       setTareas(response.data)
     })
   }, [])
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/my_view/usuarioEjercicioTarea/', {
+    axios.get('http://backend:9200/my_view/usuarioEjercicioTarea/', {
       params: {
         matricula_nomina: nomina
       }

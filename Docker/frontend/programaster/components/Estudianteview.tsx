@@ -8,8 +8,8 @@ import { useRouter } from 'next/router';
 
 export default function Home() {
 
-    const UsuarioGrupoURL = "http://127.0.0.1:8000/my_view/usuarioGrupo/";
-    const UsuariosURL = "http://127.0.0.1:8000/my_view/usuarios/";
+    const UsuarioGrupoURL = "http://backend:9200/my_view/usuarioGrupo/";
+    const UsuariosURL = "http://backend:9200/my_view/usuarios/";
 
     const { user } = useContext(AuthContext)
     const router = useRouter()
