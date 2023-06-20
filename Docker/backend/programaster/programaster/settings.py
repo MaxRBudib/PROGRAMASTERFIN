@@ -117,6 +117,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://10.50.70.236:9202',
     'http://10.50.70.236:9203',
     'http://127.0.0.1:9203',
+    'http://192.168.224.2:9201'
     'http://backend:9200',
     'http://backend:9201',
     'http://backend:9202',
